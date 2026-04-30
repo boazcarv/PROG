@@ -1,0 +1,44 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 20px 0;
+}
+
+table {
+    width: 560px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 28px;
+}
+
+caption {
+    caption-side: top;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+th,
+td {
+    border: 4px double #b5b5b5;
+    padding: 6px 8px;
+    vertical-align: middle;
+}
+
+thead th,
+tfoot td {
+    font-weight: bold;
+    text-align: center;
+}
+
+tbody td:first-child,
+tbody td:last-child,
+tfoot td:last-child {
+    text-align: left;
+}
+
+tfoot td {
+    background: #fff;
+}

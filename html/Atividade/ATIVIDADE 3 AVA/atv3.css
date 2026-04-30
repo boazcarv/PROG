@@ -1,0 +1,68 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+}
+
+h2 {
+    margin: 0 0 4px;
+    text-align: center;
+    font: 400 28px Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 4px solid #8f1f6d;
+    background: #fff;
+}
+
+th, td {
+    border: 4px solid #8f1f6d;
+    padding: 4px 6px;
+}
+
+thead th {
+    background: #370964;
+    color: #fff;
+    font: 700 26px Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+thead th:nth-child(1), tbody td:nth-child(1) { width: 70px; }
+thead th:nth-child(2), tbody td:nth-child(2) { width: 270px; }
+
+thead th:nth-child(n+3), tbody td:nth-child(n+3) {
+    width: 54px;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) { background: #ead0ff; }
+
+tbody td {
+    font-size: 28px;
+}
+
+tbody td:nth-child(2) {
+    font-size: 30px;
+}
+
+.medal-icon,
+.header-total svg {
+    display: block;
+    margin: 0 auto;
+}
+
+.medal-icon {
+    width: 34px;
+    height: 34px;
+}
+
+.cabeca-icons svg {
+    width: 38px;
+    height: 38px;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Alunos - Instituição de Ensino</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        th:nth-child(3),
+        td:nth-child(3) {
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 28px;
+        }
+        th:nth-child(2),
+        td:nth-child(2),
+        th:nth-child(3),
+        td:nth-child(3) {
+            text-align: center;
+        }
+        table {
+            width: 60%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        thead {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        thead th {
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+            border: 1px solid #1a252f;
+            font-size: 14px;
+        }
+
+        tbody td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        tbody tr {
+            transition: background-color 0.3s ease;
+        }
+
+        tbody tr:hover {
+            background-color: #ecf0f1;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        .matricula {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .nota {
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .nota-alta {
+            color: #27ae60;
+        }
+
+        .nota-media {
+            color: #f39c12;
+        }
+
+        .nota-baixa {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Listagem de Alunos</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Matrícula</th>
+                    <th>Nome do Aluno</th>
+                    <th>Curso</th>
+                    <th>Nota Final</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="matricula">2024001</td>
+                    <td>Vithor Varela</td>
+                    <td>Análise e Desenvolvimento de Sistemas</td>
+                    <td class="nota nota-alta">9.5</td>
+                </tr>
+                <tr>
+                    <td class="matricula">2024002</td>
+                    <td>Luiz Inacio</td>
+                    <td>Criminologia</td>
+                    <td class="nota nota-alta">9.8</td>
+                </tr>
+                <tr>
+                    <td class="matricula">2024003</td>
+                    <td>Vivian</td>
+                    <td>Dramatologia</td>
+                    <td class="nota nota-alta">8.9</td>
+                </tr>
+                <tr>
+                    <td class="matricula">2024004</td>
+                    <td>Mariana conta um</td>
+                    <td>Matematica</td>
+                    <td class="nota nota-alta">9.2</td>
+                </tr>
+                <tr>
+                    <td class="matricula">2024005</td>
+                    <td>João e o Pé de feijão</td>
+                    <td>Agricultura</td>
+                    <td class="nota nota-media">7.5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+ul.externo {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.externo li {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+ul.externo a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul.externo a:hover {
+    color: #0066cc;
+}

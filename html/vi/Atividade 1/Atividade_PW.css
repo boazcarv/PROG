@@ -1,0 +1,64 @@
+.pagina {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #f0f7ff, #e8f5ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fundo {
+    width: min(900px, 100%);
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    border: 1px solid #e8eef5;
+}
+
+.espaco {
+    display: inline-block;
+    color: #0f8a4a;
+    background-color: #e8f8ee;
+    border: 1px solid #c9efd8;
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    margin: 0 0 1rem;
+}
+
+.titulo {
+    color: #1b4fd8;
+    font-size: clamp(1.5rem, 2.7vw, 2.2rem);
+    line-height: 1.25;
+    text-align: center;
+    margin: 0;
+}
+
+.subtitulo {
+    color: #5f6b7a;
+    font-size: 0.95rem;
+    text-align: center;
+    margin: 0.8rem 0 1.5rem;
+    font-weight: 500;
+}
+
+.texto {
+    text-align: justify;
+    color: #243142;
+    line-height: 1.75;
+    margin: 1rem 0;
+}
+
+.imagem-1 {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    margin: 1.5rem auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+

@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background-color: #f3f4f6;
+}
+
+.tarefa1 {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tarefa1 h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #1e3a8a;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.imagem-titulo {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 0.5rem;
+}
+
+.tarefa1 h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.fonte {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.data {
+    color: #4b5563;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+
+.texto {
+    text-align: justify;
+    color: #374151;
+    line-height: 1.625;
+    margin-bottom: 1rem;
+}
+
+.task2-container {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    background-color: #f0f4f8;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.task2-paragraph {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    background-color: #ffffff;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin: 0;
+}
+
+em {
+    color: #333333;
+    font-style: italic;
+}
+
+strong {
+    color: red;
+    font-weight: bold;
+}
+
+.tarefa3 {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tarefa3 h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.tarefa3 h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1e40af;
+}
+
+.tarefa3 ul {
+    margin: 1rem 0 2rem 0;
+    padding-left: 1.5rem;
+}
+
+.tarefa3 li {
+    margin-bottom: 0.5rem;
+}
