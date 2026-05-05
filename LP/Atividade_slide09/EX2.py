@@ -4,4 +4,4 @@ nota2 = float(input("Digite a segunda nota: "))
 media = (nota1 + nota2) / 2
 
 if media >= 30 and media < 70:
-    print("Você está em RECUPERAÇÃO!!!")
+    print("Você está em PROVA FINAL!!!")
