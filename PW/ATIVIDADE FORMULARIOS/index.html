@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Cadastro de Funcionário</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1 style="text-align:center;">Cadastro de Funcionário</h1>
+
+		<form action="#" method="post" style="max-width:600px;margin:12px auto;">
+			<label>Nome
+				<input type="text" name="nome" required placeholder="Nome completo">
+			</label>
+
+			<label>Matrícula
+				<input type="text" name="matricula" required placeholder="Número da matrícula">
+			</label>
+
+			<label>CPF
+				<input type="text" name="cpf" required placeholder="00000000000">
+			</label>
+
+			<label>Cargo
+				<select name="cargo" required>
+					<option value="">-- selecione --</option>
+					<option>Professor</option>
+					<option>Técnico administrativo</option>
+					<option>Técnico de laboratório</option>
+					<option>Pedagoga(o)</option>
+					<option>Assistente de alunos</option>
+				</select>
+			</label>
+
+			<label>Endereço
+				<textarea name="endereco" rows="2" required placeholder="Rua, número, bairro, cidade"></textarea>
+			</label>
+
+			<label>Telefone
+				<input type="tel" name="telefone" required placeholder="(00) 00000-0000">
+			</label>
+
+			<p style="text-align:right;margin-top:8px;"><button type="submit">Cadastrar</button></p>
+		</form>
+	</body>
+</html>
+

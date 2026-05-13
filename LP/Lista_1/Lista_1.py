@@ -1,6 +1,4 @@
-
-
-
+import math
 
 # Questão 1 - Calculadora Simples
 
@@ -20,7 +18,7 @@ print('A temperatura em Fahrenheit é:', f)
 # Questão 3 - Área do Círculo
 
 r = float(input('Digite o raio do círculo: '))
-a = 3.14 * r**2
+a = math.pi * r**2
 print('A área do círculo é:', a)
 
 # Questão 4 - Área do Triângulo
@@ -33,7 +31,7 @@ print('A área do triângulo é:', a)
 # Questão 5 - Volume da Esfera
 
 r = float(input('Digite o raio da esfera: '))
-v = (4/3) * 3.14 * r**3
+v = (4/3) * math.pi * r**3
 print('O volume da esfera é:', v)
 
 # Questão 6 - Calculadora de Média Aritmética
