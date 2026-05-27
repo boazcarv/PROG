@@ -1,0 +1,25 @@
+p { 
+            font-size: 1.3em;
+            font-family: verdana; 
+        }
+        span {
+            color: red; 
+            font-size: .6em;
+            height: 1em;
+        }
+        .super {
+            position: relative;
+            top: -1ex;
+        }
+        .sub {
+            position: relative;
+            bottom: -1ex;
+        }
+        .shiftleft {
+            position: relative;
+            left: -1ex;
+        }
+        .shiftright {
+            position: relative;
+            right: -1ex;
+        }

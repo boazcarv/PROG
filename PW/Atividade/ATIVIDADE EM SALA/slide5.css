@@ -1,0 +1,20 @@
+        .bgimg { 
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 1; 
+        }
+        .fgimg { 
+            position: absolute;
+            top: 25px;
+            left: 100px;
+            z-index: 2; 
+        }
+        .text { 
+            position: absolute;
+            top: 25px;
+            left: 100px;
+            z-index: 3;
+            font-size: large;
+            font-family: tahoma, geneva;
+        }

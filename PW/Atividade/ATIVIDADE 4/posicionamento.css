@@ -1,0 +1,11 @@
+p {
+	position: absolute;
+	left: 100px;
+	top: 150px;
+}
+
+img {
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
