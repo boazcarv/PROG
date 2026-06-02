@@ -62,7 +62,7 @@ for _ in range(5):
 print("Somatório dos valores pares digitados:", soma_pares)
 
 
-# 8
+# 8 
 quantidade = int(input("Quantos valores você vai digitar? "))
 cont_pares = 0
 

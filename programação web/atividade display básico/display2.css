@@ -1,0 +1,56 @@
+body {
+			font-family: Arial, Helvetica, sans-serif;
+			margin: 0;
+			padding: 24px 18px;
+			color: #1f4e79;
+			background: #fff;
+		}
+
+		.titulo {
+			font-size: 24px;
+			line-height: 1.25;
+			margin-bottom: 22px;
+			color: #1d4f7a;
+		}
+
+		.sugestao {
+			font-size: 16px;
+			margin: 0 0 14px;
+			color: #1d4f7a;
+		}
+
+		.galeria {
+			white-space: nowrap;
+		}
+
+		.comida {
+			display: inline-block;
+			width: 200px;
+			vertical-align: top;
+			margin-right: 18px;
+			white-space: normal;
+		}
+
+		.comida img {
+			width: 100%;
+			height: 150px;
+			object-fit: cover;
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.categoria {
+			font-size: 11px;
+			font-weight: bold;
+			color: #6b6b6b;
+			text-transform: uppercase;
+			margin-bottom: 6px;
+		}
+
+		.comida h3 {
+			margin: 0;
+			font-size: 18px;
+			line-height: 1.15;
+			font-weight: normal;
+			color: #4d82a8;
+		}
