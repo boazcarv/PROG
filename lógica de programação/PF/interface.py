@@ -7,7 +7,7 @@ Este arquivo IMPORTA as funções do estacionamento.py
 ============================================================
 """
 
-from tkinter import *
+import tkinter as tk
 from tkinter import ttk, messagebox
 import estacionamento
 
@@ -30,7 +30,7 @@ def atualizar_tabela():
         entrada = v["entrada"] if v["entrada"] != "none" else "---"
         saida = v["saida"] if v["saida"] != "none" else "---"
         
-        tabela.insert("", END, values=(v["vaga"], estado, v["placa"], entrada, saida))
+        tabela.insert("", tk.END, values=(v["vaga"], estado, v["placa"], entrada, saida))
 
 
 def acao_criar_vagas():
@@ -40,7 +40,7 @@ def acao_criar_vagas():
         if qtd > 0:
             estacionamento.criar_vagas_iniciais(qtd)
             messagebox.showinfo("Sucesso", f"{qtd} vagas criadas!")
-            entry_qtd.delete(0, END)
+            entry_qtd.delete(0, tk.END)
             atualizar_tabela()
         else:
             messagebox.showerror("Erro", "Digite um número válido!")
@@ -60,7 +60,7 @@ def acao_entrada():
     
     if sucesso:
         messagebox.showinfo("Sucesso", mensagem)
-        entry_placa.delete(0, END)
+        entry_placa.delete(0, tk.END)
         atualizar_tabela()
     else:
         messagebox.showerror("Erro", mensagem)
@@ -92,7 +92,7 @@ def acao_relatorio():
 # CRIAR JANELA
 # ============================================================
 
-janela = Tk()
+janela = tk.Tk()
 janela.title(" parking - Sistema de Estacionamento")
 janela.geometry("800x600")
 janela.configure(bg="#2c3e50")
@@ -101,80 +101,80 @@ janela.configure(bg="#2c3e50")
 # TÍTULO
 # ============================================================
 
-Label(janela, text="SISTEMA DE ESTACIONAMENTO", 
-      font=("Arial", 20, "bold"), fg="white", bg="#2c3e50").pack(pady=20)
+tk.Label(janela, text="SISTEMA DE ESTACIONAMENTO", 
+    font=("Arial", 20, "bold"), fg="white", bg="#2c3e50").pack(pady=20)
 
 # ============================================================
 # BOTÕES
 # ============================================================
 
-frame_botoes = Frame(janela, bg="#2c3e50")
+frame_botoes = tk.Frame(janela, bg="#2c3e50")
 frame_botoes.pack(pady=10)
 
 # Criar Vagas
-frame_criar = Frame(frame_botoes, bg="#34495e", padx=15, pady=10)
+frame_criar = tk.Frame(frame_botoes, bg="#34495e", padx=15, pady=10)
 frame_criar.grid(row=0, column=0, padx=10)
 
-Label(frame_criar, text="Criar Vagas", bg="#34495e", fg="#27ae60", 
+tk.Label(frame_criar, text="Criar Vagas", bg="#34495e", fg="#27ae60", 
       font=("Arial", 11, "bold")).grid(row=0, column=0, columnspan=2, pady=5)
 
-Label(frame_criar, text="Quantidade:", bg="#34495e", fg="white", 
-      font=("Arial", 10)).grid(row=1, column=0, pady=5, sticky=W)
+tk.Label(frame_criar, text="Quantidade:", bg="#34495e", fg="white", 
+    font=("Arial", 10)).grid(row=1, column=0, pady=5, sticky=tk.W)
 
-entry_qtd = Entry(frame_criar, width=10, font=("Arial", 14))
+entry_qtd = tk.Entry(frame_criar, width=10, font=("Arial", 14))
 entry_qtd.grid(row=1, column=1, pady=5, padx=5)
 
-Button(frame_criar, text="Criar", bg="#27ae60", fg="white", 
+tk.Button(frame_criar, text="Criar", bg="#27ae60", fg="white", 
        font=("Arial", 10, "bold"), command=acao_criar_vagas).grid(row=2, column=0, columnspan=2, pady=10)
 
 # Entrada
-frame_entrada = Frame(frame_botoes, bg="#34495e", padx=15, pady=10)
+frame_entrada = tk.Frame(frame_botoes, bg="#34495e", padx=15, pady=10)
 frame_entrada.grid(row=0, column=1, padx=10)
 
-Label(frame_entrada, text="Entrada", bg="#34495e", fg="#f39c12", 
+tk.Label(frame_entrada, text="Entrada", bg="#34495e", fg="#f39c12", 
       font=("Arial", 11, "bold")).grid(row=0, column=0, columnspan=2, pady=5)
 
-Label(frame_entrada, text="Placa:", bg="#34495e", fg="white", 
-      font=("Arial", 10)).grid(row=1, column=0, pady=5, sticky=W)
+tk.Label(frame_entrada, text="Placa:", bg="#34495e", fg="white", 
+    font=("Arial", 10)).grid(row=1, column=0, pady=5, sticky=tk.W)
 
-entry_placa = Entry(frame_entrada, width=15, font=("Arial", 14))
+entry_placa = tk.Entry(frame_entrada, width=15, font=("Arial", 14))
 entry_placa.grid(row=1, column=1, pady=5, padx=5)
 
-Button(frame_entrada, text="Registrar Entrada 🚗", bg="#f39c12", fg="white", 
+tk.Button(frame_entrada, text="Registrar Entrada 🚗", bg="#f39c12", fg="white", 
        font=("Arial", 10, "bold"), command=acao_entrada).grid(row=2, column=0, columnspan=2, pady=10)
 
 # Saída
-frame_saida = Frame(frame_botoes, bg="#34495e", padx=15, pady=10)
+frame_saida = tk.Frame(frame_botoes, bg="#34495e", padx=15, pady=10)
 frame_saida.grid(row=0, column=2, padx=10)
 
-Label(frame_saida, text="Saída", bg="#34495e", fg="#e74c3c", 
+tk.Label(frame_saida, text="Saída", bg="#34495e", fg="#e74c3c", 
       font=("Arial", 11, "bold")).pack(pady=5)
 
-Button(frame_saida, text="Registrar Saída 🚙", bg="#e74c3c", fg="white", 
+tk.Button(frame_saida, text="Registrar Saída 🚙", bg="#e74c3c", fg="white", 
        font=("Arial", 11, "bold"), command=acao_saida).pack(pady=15, padx=20)
 
 # Relatório
-frame_relatorio = Frame(frame_botoes, bg="#34495e", padx=15, pady=10)
+frame_relatorio = tk.Frame(frame_botoes, bg="#34495e", padx=15, pady=10)
 frame_relatorio.grid(row=0, column=3, padx=10)
 
-Label(frame_relatorio, text="Relatório", bg="#34495e", fg="#3498db", 
+tk.Label(frame_relatorio, text="Relatório", bg="#34495e", fg="#3498db", 
       font=("Arial", 11, "bold")).pack(pady=5)
 
-Button(frame_relatorio, text="Ver Relatório 📊", bg="#3498db", fg="white", 
+tk.Button(frame_relatorio, text="Ver Relatório 📊", bg="#3498db", fg="white", 
        font=("Arial", 11, "bold"), command=acao_relatorio).pack(pady=15, padx=20)
 
 # ============================================================
 # TABELA
 # ============================================================
 
-Label(janela, text="VAGAS DO ESTACIONAMENTO", bg="#2c3e50", fg="white", 
+tk.Label(janela, text="VAGAS DO ESTACIONAMENTO", bg="#2c3e50", fg="white", 
       font=("Arial", 14, "bold")).pack(pady=10)
 
-frame_tabela = Frame(janela)
+frame_tabela = tk.Frame(janela)
 frame_tabela.pack(pady=10)
 
-scrollbar_y = Scrollbar(frame_tabela, orient=VERTICAL)
-scrollbar_y.pack(side=RIGHT, fill=Y)
+scrollbar_y = tk.Scrollbar(frame_tabela, orient=tk.VERTICAL)
+scrollbar_y.pack(side=tk.RIGHT, fill=tk.Y)
 
 tabela = ttk.Treeview(frame_tabela, columns=("vaga", "estado", "placa", "entrada", "saida"),
                        show="headings", height=15, yscrollcommand=scrollbar_y.set)
@@ -187,20 +187,20 @@ tabela.heading("placa", text="Placa")
 tabela.heading("entrada", text="Entrada")
 tabela.heading("saida", text="Saída")
 
-tabela.column("vaga", width=60, anchor=CENTER)
-tabela.column("estado", width=100, anchor=CENTER)
-tabela.column("placa", width=120, anchor=CENTER)
-tabela.column("entrada", width=150, anchor=CENTER)
-tabela.column("saida", width=150, anchor=CENTER)
+tabela.column("vaga", width=60, anchor=tk.CENTER)
+tabela.column("estado", width=100, anchor=tk.CENTER)
+tabela.column("placa", width=120, anchor=tk.CENTER)
+tabela.column("entrada", width=150, anchor=tk.CENTER)
+tabela.column("saida", width=150, anchor=tk.CENTER)
 
-tabela.pack(side=LEFT, fill=BOTH, expand=True)
+tabela.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
 # ============================================================
 # BOTÃO ATUALIZAR
 # ============================================================
 
-Button(janela, text="🔄 Atualizar Tabela", bg="#95a5a6", fg="white",
-       font=("Arial", 10), command=atualizar_tabela).pack(pady=10)
+tk.Button(janela, text="🔄 Atualizar Tabela", bg="#95a5a6", fg="white",
+    font=("Arial", 10), command=atualizar_tabela).pack(pady=10)
 
 # ============================================================
 # INICIAR
