@@ -2,7 +2,7 @@
 # SISTEMA DE GERENCIAMENTO DE ESTACIONAMENTO
 # Projeto da disciplina de Introdução à Lógica e Programação
 # ============================================================
-#
+
 # Este programa gerencia um estacionamento com as seguintes funcionalidades:
 # - Criar vagas iniciais (salva em arquivo CSV)
 # - Registrar entrada de veículos (placa + horário)
@@ -10,7 +10,7 @@
 # - Relatório de veículos estacionados no momento
 # - Relatório de faturamento (mensal, semanal e total)
 # - Interface gráfica com Tkinter
-#
+
 # Arquivos CSV utilizados:
 # - vagas.csv          → armazena o estado atual de cada vaga
 # - historico_saida.csv → registra cada saída (placa, entrada, saída, valor)
@@ -511,8 +511,8 @@ def relatorio_faturamento():
             # Acumula o valor no total geral
             fatura_geral += valor_pago
 
-    # Agora gera o arquivo de relatório
-    # Abre no modo escrita ("w") — cria ou sobrescreve o arquivo
+    # agora gera o arquivo de relatório
+    # abre no modo escrita ("w") — cria ou sobrescreve o arquivo
     with open("relatorio_do_faturamento.csv", "w", encoding="utf-8") as faturamento:
 
         # Escreve o título do relatório
