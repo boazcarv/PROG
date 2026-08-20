@@ -1,7 +1,5 @@
-# ============================================================
 # Exercício 01 - Estruturas sequenciais
 # Leia 4 notas, mostre as notas digitadas e a média aritmética.
-# ============================================================
 
 notas = []
 for i in range(1, 5):

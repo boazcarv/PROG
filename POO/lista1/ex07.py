@@ -1,7 +1,5 @@
-# ============================================================
 # Exercício 07 - Estruturas sequenciais
 # Conversão de Fahrenheit para Celsius: C = (F - 32) * 5/9
-# ============================================================
 
 fahrenheit = float(input('Temperatura em graus Fahrenheit: '))
 celsius = (fahrenheit - 32) * 5 / 9

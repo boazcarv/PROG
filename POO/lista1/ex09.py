@@ -1,7 +1,5 @@
-# ============================================================
 # Exercício 09 - Estruturas condicionais
 # Verifica se o número está dentro da faixa de 1 a 10.
-# ============================================================
 
 numero = int(input('Digite um número entre 1 e 10: '))
 

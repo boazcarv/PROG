@@ -1,7 +1,5 @@
-# ============================================================
 # Exercício 10 - Estruturas condicionais
 # Informa qual dos dois valores é o maior.
-# ============================================================
 
 a = float(input('Digite o primeiro valor: '))
 b = float(input('Digite o segundo valor: '))

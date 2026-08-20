@@ -1,8 +1,6 @@
-# ============================================================
 # Exercício 06 - Estruturas sequenciais
 # Percentual de votos brancos, nulos e válidos sobre o total
 # de eleitores.
-# ============================================================
 
 brancos = int(input('Votos brancos: '))
 nulos = int(input('Votos nulos: '))

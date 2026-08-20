@@ -1,7 +1,5 @@
-# ============================================================
 # Exercício 05 - Estruturas sequenciais
 # 18 W por m²; lâmpadas de 60 W. Quantas são necessárias?
-# ============================================================
 
 import math
 
