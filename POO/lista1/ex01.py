@@ -1,6 +1,7 @@
-# Exercício 01 - Estruturas sequenciais
-# Leia 4 notas, mostre as notas digitadas e a média aritmética.
-
+'''
+Questao 01 - Estruturas sequenciais
+Leia 4 notas, mostre as notas digitadas e a média aritmética.
+'''
 notas = []
 for i in range(1, 5):
     notas.append(float(input(f'Digite a nota {i}: ')))

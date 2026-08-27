@@ -1,7 +1,8 @@
-# Exercício 04 - Estruturas sequenciais
-# Salário do funcionário: por cada filho, 3% a mais sobre
-# o salário bruto.
-
+'''
+Questao 04 - Estruturas sequenciais
+Salário do funcionário: por cada filho, 3% a mais sobre
+o salário bruto
+'''
 nome = input('Nome completo do funcionário: ')
 horas = float(input('Horas trabalhadas por mês: '))
 valor_hora = float(input('Valor por hora trabalhada (R$): '))
