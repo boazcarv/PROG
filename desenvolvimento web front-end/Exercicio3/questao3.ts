@@ -1,43 +1,32 @@
-function main(): void {
-	let inicio: number;
-	let fim: number;
+let inicio = Number(prompt("Início do intervalo:"));
+let fim = Number(prompt("Fim do intervalo:"));
 
-	// Leitura e validação do início
-	do {
-		inicio = Number(prompt("Digite o início do intervalo (inteiro positivo): ") ?? "");
-	} while (!Number.isInteger(inicio) || inicio <= 0);
+if (
+  Number.isInteger(inicio) &&
+  Number.isInteger(fim) &&
+  inicio >= 1 &&
+  fim >= inicio
+) {
+  let contadorPrimos = 0;
 
-	// Leitura e validação do fim
-	do {
-		fim = Number(prompt(`Digite o fim do intervalo (inteiro >= ${inicio}): `) ?? "");
-	} while (!Number.isInteger(fim) || fim < inicio);
+  for (let num = Math.max(inicio, 2); num <= fim; num++) {
+    let primo = true;
+    let divisor = num - 1;
 
-	let quantidadePrimos = 0;
+    while (primo && divisor > 1) {
+      if (num % divisor === 0) {
+        primo = false;
+      } else {
+        divisor--;
+      }
+    }
 
-	// Percorre cada número do intervalo
-	for (let num = inicio; num <= fim; num++) {
-		if (num <= 1) {
-			continue; // 0 e 1 não são primos
-		}
+    if (primo) {
+      contadorPrimos++;
+    }
+  }
 
-		// Lógica idêntica à Questão 2 para cada número
-		let primo = true;
-		let divisor = num - 1;
-
-		while (primo && divisor > 1) {
-			if (num % divisor === 0) {
-				primo = false;
-			} else {
-				divisor--;
-			}
-		}
-
-		if (primo) {
-			quantidadePrimos++;
-		}
-	}
-
-	console.log(`No intervalo de ${inicio} até ${fim}, existem ${quantidadePrimos} números primos.`);
+  console.log(`Quantidade de primos: ${contadorPrimos}`);
+} else {
+  console.log("Intervalo inválido.");
 }
-
-main();
