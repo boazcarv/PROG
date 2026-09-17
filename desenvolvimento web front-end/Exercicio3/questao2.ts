@@ -1,18 +1,24 @@
-let num: number;
+function lerInteiroMaiorQueUm(): number {
+  let numero: number;
 
-do {
-  num = Number(prompt("Digite um inteiro maior que 1:"));
-} while (num <= 1 || !Number.isInteger(num));
+  do {
+    numero = Number(prompt("Digite um inteiro maior que 1:"));
+  } while (numero <= 1 || !Number.isInteger(numero));
 
-let primo = true;
-let divisor = num - 1;
-
-while (primo && divisor > 1) {
-  if (num % divisor === 0) {
-    primo = false;
-  } else {
-    divisor--;
-  }
+  return numero;
 }
 
-console.log(`${num} ${primo ? "é" : "não é"} primo.`);
+function ehPrimo(numero: number): boolean {
+  for (let divisor = 2; divisor < numero; divisor++) {
+    if (numero % divisor === 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+const numero = lerInteiroMaiorQueUm();
+const resultado = ehPrimo(numero) ? "é" : "não é";
+
+console.log(`${numero} ${resultado} primo.`);
