@@ -1,5 +1,7 @@
 """Exercícios sobre Circle, Point e Rectangle."""
 
+from math import hypot
+
 # Questão 1 — Escreva uma definição para uma classe denominada Circle, com os
 # atributos center e radius, onde center é um objeto Point e radius é um número.
 class Point:
@@ -12,6 +14,23 @@ class Circle:
     def __init__(self, center, radius):
         self.center = center
         self.radius = radius
+
+
+class Rectangle:
+    def __init__(self, x, y, width, height):
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+
+    @property
+    def corners(self):
+        return (
+            Point(self.x, self.y),
+            Point(self.x + self.width, self.y),
+            Point(self.x, self.y + self.height),
+            Point(self.x + self.width, self.y + self.height),
+        )
 
 
 # Questão 2 — Instancie um objeto Circle, que represente um círculo com o
