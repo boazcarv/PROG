@@ -1,0 +1,43 @@
+<section class="calculo" aria-labelledby="titulo-calculo">
+  <h1 id="titulo-calculo">Média parcial</h1>
+  <p class="descricao">Informe as notas dos dois primeiros bimestres.</p>
+
+  <form (ngSubmit)="calcularMedia()" #formulario="ngForm">
+    <div class="campo">
+      <label for="primeiro-bimestre">Nota do 1º bimestre</label>
+      <input
+        id="primeiro-bimestre"
+        name="primeiroBimestre"
+        type="number"
+        min="0"
+        max="100"
+        step="0.01"
+        required
+        [(ngModel)]="notaPrimeiroBimestre"
+      />
+    </div>
+
+    <div class="campo">
+      <label for="segundo-bimestre">Nota do 2º bimestre</label>
+      <input
+        id="segundo-bimestre"
+        name="segundoBimestre"
+        type="number"
+        min="0"
+        max="100"
+        step="0.01"
+        required
+        [(ngModel)]="notaSegundoBimestre"
+      />
+    </div>
+
+    <button type="submit" [disabled]="formulario.invalid">Calcular média</button>
+  </form>
+
+  @if (mediaParcial !== null) {
+    <div class="resultado" aria-live="polite">
+      <p>Média parcial: <strong>{{ mediaParcial | number: '1.2-2' }}</strong></p>
+      <p>Situação: <strong>{{ situacao }}</strong></p>
+    </div>
+  }
+</section>
