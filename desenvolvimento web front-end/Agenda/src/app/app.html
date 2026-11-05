@@ -1,0 +1,145 @@
+<main class="page-shell">
+  <header class="page-header">
+    <h1>Minha agenda</h1>
+    <p>Adicione e consulte seus contatos.</p>
+  </header>
+
+  <section class="content-grid">
+    <article class="panel form-panel">
+      <div class="panel-heading">
+        <div>
+          <h2>Novo contato</h2>
+        </div>
+      </div>
+
+      <form (ngSubmit)="adicionarContato()" #formularioContato="ngForm">
+        <div class="field">
+          <label for="nome">Nome completo <span>*</span></label>
+          <input
+            id="nome"
+            name="nome"
+            type="text"
+            placeholder="Ex.: Ana Souza"
+            [(ngModel)]="novoContato.nome"
+            #nome="ngModel"
+            required
+          />
+          @if (nome.invalid && (nome.touched || formularioContato.submitted)) {
+            <small class="error-message">Informe o nome do contato.</small>
+          }
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="telefone">Telefone <span>*</span></label>
+            <input
+              id="telefone"
+              name="telefone"
+              type="tel"
+              placeholder="(00) 00000-0000"
+              [(ngModel)]="novoContato.telefone"
+              #telefone="ngModel"
+              required
+            />
+            @if (telefone.invalid && (telefone.touched || formularioContato.submitted)) {
+              <small class="error-message">Informe o telefone.</small>
+            }
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="ana@email.com"
+              [(ngModel)]="novoContato.email"
+              email
+              #email="ngModel"
+            />
+            @if (email.invalid && email.touched) {
+              <small class="error-message">Digite um e-mail válido.</small>
+            }
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="aniversario">Aniversário</label>
+            <input id="aniversario" name="aniversario" type="date" [(ngModel)]="novoContato.aniversario" />
+          </div>
+          <div class="field">
+            <label for="tipo">Tipo</label>
+            <select id="tipo" name="tipo" [(ngModel)]="novoContato.tipo">
+              <option value="Amigo(a)">Amigo(a)</option>
+              <option value="Família">Família</option>
+              <option value="Trabalho">Trabalho</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="endereco">Endereço</label>
+          <input
+            id="endereco"
+            name="endereco"
+            type="text"
+            placeholder="Rua, número e cidade"
+            [(ngModel)]="novoContato.endereco"
+          />
+        </div>
+
+        <button class="primary-button" type="submit">
+          <span aria-hidden="true">+</span>
+          Salvar contato
+        </button>
+      </form>
+    </article>
+
+    <article class="panel contacts-panel">
+      <div class="panel-heading contacts-heading">
+        <div>
+          <h2>Contatos <span class="count">{{ contatos().length }}</span></h2>
+        </div>
+      </div>
+
+      @if (contatos().length === 0) {
+        <div class="empty-state">
+          <h3>Nenhum contato cadastrado</h3>
+          <p>Use o formulário para adicionar seu primeiro contato.</p>
+        </div>
+      } @else {
+        <div class="contact-list">
+          @for (contato of contatos(); track contato.id) {
+            <div class="contact-card">
+              <div class="avatar" [style.background-color]="contato.cor">
+                {{ obterIniciais(contato.nome) }}
+              </div>
+              <div class="contact-info">
+                <h3>{{ contato.nome }}</h3>
+                <a [href]="'tel:' + contato.telefone">☎ {{ contato.telefone }}</a>
+                @if (contato.email) {
+                  <a [href]="'mailto:' + contato.email">✉ {{ contato.email }}</a>
+                }
+                @if (contato.aniversario) {
+                  <p>🎂 {{ contato.aniversario }} · {{ contato.tipo }}</p>
+                }
+                @if (contato.endereco) {
+                  <p>⌖ {{ contato.endereco }}</p>
+                }
+              </div>
+              <button
+                class="delete-button"
+                type="button"
+                (click)="removerContato(contato.id)"
+                [attr.aria-label]="'Remover ' + contato.nome"
+              >
+                ×
+              </button>
+            </div>
+          }
+        </div>
+      }
+    </article>
+  </section>
+</main>
