@@ -17,6 +17,7 @@ export class Calcular {
     this.mediaParcial =
       (2 * this.notaPrimeiroBimestre + 3 * this.notaSegundoBimestre) / 5;
   }
+  
 
   get situacao(): string {
     if (this.mediaParcial === null) {
