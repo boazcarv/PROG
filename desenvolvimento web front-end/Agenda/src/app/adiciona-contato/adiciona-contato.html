@@ -1,1 +1,59 @@
-<p>Área para adicionar um contato.</p>
+<form [formGroup]="formularioContato" (ngSubmit)="adicionarContato()">
+  @let controles = formularioContato.controls;
+
+  <div class="field">
+    <label for="nome">Nome completo <span>*</span></label>
+    <input id="nome" type="text" formControlName="nome" placeholder="Ex.: Ana Souza" />
+    @if (controles.nome.invalid && controles.nome.touched) {
+      <small class="error-message">
+        {{ controles.nome.hasError('required') ? 'Informe o nome.' : 'Mínimo de 3 caracteres.' }}
+      </small>
+    }
+  </div>
+
+  <div class="field">
+    <label for="telefone">Telefone <span>*</span></label>
+    <input id="telefone" type="tel" formControlName="telefone" placeholder="(00) 00000-0000" />
+    @if (controles.telefone.invalid && controles.telefone.touched) {
+      <small class="error-message">Telefone é obrigatório.</small>
+    }
+  </div>
+
+  <div class="field">
+    <label for="email">E-mail <span>*</span></label>
+    <input id="email" type="email" formControlName="email" placeholder="ana@email.com" />
+    @if (controles.email.invalid && controles.email.touched) {
+      <small class="error-message">
+        {{ controles.email.hasError('required') ? 'Informe o e-mail.' : 'E-mail inválido.' }}
+      </small>
+    }
+  </div>
+
+  <div class="field">
+    <label for="aniversario">Aniversário <span>*</span></label>
+    <input id="aniversario" type="date" formControlName="aniversario" />
+    @if (controles.aniversario.invalid && controles.aniversario.touched) {
+      <small class="error-message">Informe a data.</small>
+    }
+  </div>
+
+  <div class="field">
+    <label for="tipo">Tipo <span>*</span></label>
+    <select id="tipo" formControlName="tipo">
+      <option value="Amigo(a)">Amigo(a)</option>
+      <option value="Família">Família</option>
+      <option value="Trabalho">Trabalho</option>
+      <option value="Outro">Outro</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label for="endereco">Endereço <span>*</span></label>
+    <input id="endereco" type="text" formControlName="endereco" placeholder="Rua, número e cidade" />
+    @if (controles.endereco.invalid && controles.endereco.touched) {
+      <small class="error-message">Informe o endereço.</small>
+    }
+  </div>
+
+  <button type="submit" [disabled]="formularioContato.invalid">Salvar contato</button>
+</form>
